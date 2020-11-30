@@ -101,10 +101,19 @@ let thirdEvent = document.getElementById('event3')
 let events = []
 let u = 0
 let numEvents = 0
+let abrv
 
 function checkDate(a) {
+    if (a == 1 || a == 21 || a == 31)
+        abrv = 'st'
+    else if (a == 2 || a == 22)
+        abrv = 'nd'
+    else if (a == 3 || a == 23)
+        abrv = 'rd'
+    else
+        abrv = 'th'
     titleMonth.innerHTML = ''
-    titleMonth.innerHTML += monthCheck(month) + ' ' + a
+    titleMonth.innerHTML += monthCheck(month) + ' ' + a + abrv
     if(!events[u])
         eventsDisplay.style.display = 'block';
 }
@@ -113,9 +122,10 @@ function checkDate(a) {
 function addEvent() {
     let newEvent = prompt('enter event information')
     if(newEvent != null) {
-        events[u] = newEvent
+        
+        eventsDisplay.innerHTML = ''
+        eventsDisplay.innerHTML = newEvent
     }
-    firstEvent.innerHTML = events[u]
     u++;
 }
 
