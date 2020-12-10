@@ -28,20 +28,20 @@ Ball.prototype.draw = function() {
 }
 
 Ball.prototype.update = function() {
-    if ((this.x + this.size) >= width) {
-        this.velX = -(this.velX)
+    if (this.x >= width) {
+        this.x = 1
     }
 
-    if ((this.x - this.size) <= 0) {
-        this.velX = -(this.velX)
+    if (this.x <= 0) {
+        this.x = width-1
     }
 
-    if ((this.y + this.size) >= height) {
-        this.velY = -(this.velY)
+    if (this.y >= height) {
+        this.y = 1
     }
 
-    if ((this.y + this.size) <= 0) {
-        this.velY = -(this.velY)
+    if (this.y <= 0) {
+        this.y = height - 1
     }
 
     this.x += this.velX
