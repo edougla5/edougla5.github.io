@@ -1,7 +1,26 @@
 #myButton {
+    margin-top: 35%;
+}
+
+button {
+
+    cursor: pointer;
+}
+
+body {
+    background-color: black;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
     vertical-align: middle;
 }
 
-#buttonElement {
-    cursor: pointer;
+#title {
+    color: #999;
 }
