@@ -96,6 +96,7 @@ function touch(t) {
     if(canMove && f.x) {
         a=f.offsetX-x/2
 }
+}
     function up(e) {
         canMove = false
     }
