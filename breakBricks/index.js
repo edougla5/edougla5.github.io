@@ -80,6 +80,7 @@ let dragStart
 let canMove = false
 canvas.addEventListener('mouseup',up)
 canvas.addEventListener('mousedown',down)
+canvas.addEventListener('touchstart',touch)
 canvas.addEventListener('mousemove', move)
 function down(e) {
     canMove = true
@@ -90,6 +91,10 @@ function move(f) {
 if(canMove && f.x) {
                 a=f.offsetX-x/2
 }
+}
+function touch(t) {
+    if(canMove && f.x) {
+        a=f.offsetX-x/2
 }
     function up(e) {
         canMove = false
