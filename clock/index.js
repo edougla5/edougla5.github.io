@@ -6,9 +6,15 @@
 
 let hourChange = document.getElementById('hourHand')
 let minuteChange = document.getElementById('minuteHand')
+let secondChange = document.getElementById('secondHand')
+
+let day
 
 let timeDiff = 0
 
+function newAlarm() {
+    alert('make new alarm?')
+}
 
 // reseting hours and minutes every second
 // setInterval function uses miliseconds
@@ -19,8 +25,14 @@ setInterval (function() {
     let minutes = currentTime.getMinutes()
     let seconds = currentTime.getSeconds()
 
-    if(hours+timeDiff>12)
-    hours-=12
+
+
+    if(hours+timeDiff>12) {
+        day = false
+        hours-=12
+    } else {
+        day = true
+    }
 
     document.getElementById('hours').innerHTML = hours + timeDiff
     document.getElementById('minutes').innerHTML = minutes
@@ -34,8 +46,17 @@ setInterval (function() {
 
     hours = hours +(timeDiff*30)
 
+    let s = seconds*6
+    s -= 90
     hourChange.style.transform = 'rotate(' + hours + 'deg)'
     minuteChange.style.transform = 'rotate(' + minutes + 'deg)'
+    secondChange.style.transform = 'rotate(' + s + 'deg)'
+
+    if (day) {
+        document.getElementById('am/pm').innerHTML = 'am'
+    } else {
+        document.getElementById('am/pm').innerHTML = 'pm'
+    }
 
 }, 1000)
 
@@ -154,11 +175,11 @@ function tokyoTime() {
         atl.style.display = 'none'
         anchorage.style.display = 'none'
         hongKong.style.display = 'none'
-        tokyo.style.display = 'none'
+        tokyo.style.display = 'block'
         paris.style.display = 'none'
         sydney.style.display = 'none'
         moscow.style.display = 'none'
-        mumbai.style.display = 'block'
+        mumbai.style.display = 'none'
 }
 
 function anchorageTime() {
@@ -191,10 +212,10 @@ function parisTime() {
     anchorage.style.display = 'none'
     hongKong.style.display = 'none'
     tokyo.style.display = 'none'
-    paris.style.display = 'none'
+    paris.style.display = 'block'
     sydney.style.display = 'none'
     moscow.style.display = 'none'
-    mumbai.style.display = 'block'
+    mumbai.style.display = 'none'
 }
 
 function sydneyTime() {
@@ -217,8 +238,8 @@ function moscowTime() {
     tokyo.style.display = 'none'
         paris.style.display = 'none'
         sydney.style.display = 'none'
-        moscow.style.display = 'none'
-        mumbai.style.display = 'block'
+        moscow.style.display = 'block'
+        mumbai.style.display = 'none'
 }
     
  function mumbaiTime() {

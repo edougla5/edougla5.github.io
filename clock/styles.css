@@ -11,6 +11,10 @@
     cursor: pointer;
 }
 
+#alarms {
+    cursor: pointer;
+}
+
 #nav a {
     display: inline-block;
 }
@@ -29,6 +33,16 @@
     background-color: rgba(163, 70, 54, 0.678);
     border-radius: 50%;
     border-width: thin;
+}
+
+#secondHand {
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 95px;
+    background-color: green;
+    margin: 100px;
+    transform-origin: left;
 }
 
 #hourHand {
@@ -101,9 +115,13 @@
     display: none;
 }
 
+#hours {
+    padding-right: 0px;
+}
+
 body {
     color: #fff;
-  background: repeating-linear-gradient(45deg, #333333 0, #333333 5%, #4f4f4f 0, #4f4f4f 50%) 0 / 10px 10px;
+    background: repeating-linear-gradient(45deg, #333333 0, #333333 5%, #4f4f4f 0, #4f4f4f 50%) 0 / 10px 10px;
 }
 
 #timeLabel {

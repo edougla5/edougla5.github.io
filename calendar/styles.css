@@ -1,0 +1,259 @@
+#calendar {
+    float: right;
+    cursor: pointer;
+    margin-right: 300px;
+    margin-top: 40px;
+}
+
+body {
+    color: black;
+}
+
+.boxes {
+    margin-top: 50px;
+}
+
+#dropdown {
+    display: block;
+    margin: 0 auto;
+}
+
+#month {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 5px;
+    font-family: Langar, sans-serif;
+    font-size: 30px;
+}
+
+#year {
+    display: block;
+    position: absolute;
+    right: 100px;
+    top: -15px;
+    font-size: 30px;
+    font-family: Langar, sans-serif;
+}
+
+#forwardArrow {
+    position: absolute;
+    display: inline;
+    border: solid black;
+    border-radius: 20%;
+    margin-left: 55%;
+    cursor: pointer;
+}
+
+#backwardArrow {
+    margin-left: 45%;
+    position: absolute;
+    transform: rotate(180deg);
+    display: inline;
+    position: relative;
+    border: solid black;
+    border-radius: 20%;
+    cursor: pointer;
+}
+.box {
+    border-radius: 10px;
+    display: inline-grid;
+    margin: 4px;
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border: solid white;
+    border-width: thin;
+    box-shadow: 10px 5px 5px #333;
+    color: white;
+    cursor: pointer;
+}
+
+.box ul {
+    list-style: none;
+    padding: 5px 0 0 5px;
+    margin: 0 0 0 0;
+}
+
+.box:hover {
+    border: solid black;
+    border-width: thin;
+}
+
+#box31 ul {
+    list-style: none;
+    padding: 5px 0 0 5px;
+    margin: 0 0 0 0;
+}
+
+#box31 {
+    border-radius: 10px;
+    display: inline-grid;
+    margin: 4px;
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border: solid white;
+    border-width: thin;
+    box-shadow: 10px 5px 5px #333;
+    color: white;
+    cursor: pointer;
+}
+
+#box30 ul {
+    list-style: none;
+    padding: 5px 0 0 5px;
+    margin: 0 0 0 0;
+}
+
+#box30:hover {
+    border: solid black;
+    border-width: thin;
+}
+
+#box31:hover {
+    border: solid black;
+    border-width: thin;
+}
+
+#box29:hover {
+    border: solid black;
+    border-width: thin;
+}
+
+#box30 {
+    border-radius: 10px;
+    display: inline-grid;
+    margin: 4px;
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border: solid white;
+    border-width: thin;
+    box-shadow: 10px 5px 5px #333;
+    color: white;
+    cursor: pointer;
+}
+
+#box29 ul {
+    list-style: none;
+    padding: 5px 0 0 5px;
+    margin: 0 0 0 0;
+}
+
+#box29 {
+    border-radius: 10px;
+    display: inline-grid;
+    margin: 4px;
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border: solid white;
+    border-width: thin;
+    box-shadow: 10px 5px 5px #333;
+    color: white;
+    cursor: pointer;
+}
+
+
+#eventsBox {
+    position: absolute;
+    right: 40px;
+    background-color: black;
+    color: white;
+    width: 350px;
+    height: 200px;
+    bottom: 30px;
+    border: solid white;
+    border-width: thin;
+    box-shadow: 10px 5px 5px #333;
+}
+
+.event {
+    padding-top: 40px;
+    padding-left: 60px;
+}
+
+#date {
+    display: inline;
+    margin: 0 auto;
+}
+
+#title {
+    margin: 6px 0 0 10px;
+    font-style: italic;
+    color: white;
+}
+
+#titleForMonth {
+    display: inline;
+    padding-left: 5px;
+}
+
+#todaysDate {
+    display: inline;
+    padding-left: 5px;
+}
+
+#eventList {
+    display: none;
+    position: fixed;
+    margin-top: -20px;
+}
+
+#addEvent {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    width: 100px;
+    left: 13px;
+    bottom: 145px;
+    float: left;
+}
+
+#removeEvent {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    width: 100px;
+    bottom: 100px;
+    left: 13px;
+    float: left;
+}
+#noEvents {
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+}
+
+#event1 {
+    text-align: center;
+}
+
+#event2 {
+    text-align: center;
+}
+
+#event3 {
+    text-align: center;
+}
+
+#clearEvents {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    margin-left: 5px;
+    width: 100px;
+    bottom: 70px;
+}
+
+#dayDisplay {
+    left: 40px;
+    position: absolute;
+    margin-top: 50px;
+    display: inline-flex;
+}
+
+#days {
+    margin-right: 50px;
+}

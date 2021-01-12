@@ -20,8 +20,8 @@
 
     <input id = 'searchBar' type = 'text' placeholder="search..">
     <button id ='myButton' type = 'button' onclick = 'searchAtl()'>search</button>
+    <button id = 'alarms' onclick = 'newAlarm()'>alarms</button>
 
-    <h3 id='time-label'>current time in:</h3>
     <h3 id='atlLabel'>atlanta</h3>
     <h3 id ='tokyoLabel'>tokyo</h3>
     <h3 id='anchorageLabel'>anchorage</h3>
@@ -32,8 +32,8 @@
     <h3 id='mumbaiLabel'>mumbai</h3>
 
     <div id = 'clock'>
-        <div id = 'twelve'></div>
         <div id = 'hourHand'></div>
+        <div id = 'secondHand'></div>
         <div id = 'minuteHand'></div>
         </div>
     </div>
@@ -42,6 +42,7 @@
             <ul>
                 <li>hours:</li>
                 <li id='hours'>hours</li>
+                <li id = 'am/pm'>am</li>
             </ul>
             <ul>
                 <li>minutes:</li>
@@ -52,7 +53,7 @@
                 <li id='seconds'>seconds</li>
             </ul>
         </div>
-        
+
 
     <script src="index.js"></script>
 </body>

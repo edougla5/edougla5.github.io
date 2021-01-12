@@ -1,26 +1,51 @@
-#myButton {
-    margin-top: 35%;
+
+#buttonElement {
+    cursor: pointer;
+    display: block;
 }
 
-button {
+#mdnBallsButton {
+    text-decoration: none;
+}
 
-    cursor: pointer;
+#buttonElement {
+    margin: auto;
+}
+
+#myOtherButton {
+    text-decoration: none;
+    margin: 10px;
+}
+
+#myButton {
+    text-decoration: none;
+}
+
+#clockAppButton {
+    text-decoration: none;
+    margin: 10px;
+}
+
+#buttonsContainer {
+    margin-top: 50%;
+}
+
+#top {
+    background-color: rgb(3, 194, 105);
+    display: block;
+    margin: auto;
 }
 
 body {
-    background-color: black;
+    background-color: #333;
 }
 
-a {
-    display: block;
-    text-align: center;
-    margin-bottom: 20px;
+#calculator {
+    text-decoration: none;
+    margin: 10px;
 }
 
-.container {
-    vertical-align: middle;
-}
-
-#title {
-    color: #999;
+#breakbricks {
+    text-decoration: none;
+    margin: 10px;
 }

@@ -11,19 +11,24 @@ function random(min, max) {
     return num
 }
 
-function Ball(x,y, velX, velY, color, size) {
+function Shape(x,y, velX, velY, exists) {
     this.x = x
     this.y = y
     this.velX = velX
     this.velY = velY
-    this.color = color
+    this.exists = exists
+}
+
+function Ball(x,y,velX,velY,exists,color,size) {
+    Shape.call(this,x,y,velX,velY,exists)
+    this.color = size
     this.size = size
 }
 
 Ball.prototype.draw = function() {
     ctx.beginPath()
     ctx.fillStyle = this.color
-    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI)
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI,true)
     ctx.fill()
 }
 

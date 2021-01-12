@@ -1,0 +1,162 @@
+#title {
+    font-size: 30px;
+}
+
+#container {
+    background-color: #333;
+    width: 200px;
+    height: 300px;
+    margin: auto;
+    margin-top: 25%;
+    display: block;
+}
+
+#display {
+    margin: 10px;
+    display: table;
+    background-color: green;
+    height: 40px;
+    width: 105%;
+    vertical-align: middle;
+    border: solid yellowgreen;
+    border-width: thin;
+}
+
+#innerText {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+
+#ac {
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+    cursor: pointer;
+}
+
+#add {
+    float: right;
+    vertical-align: middle;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: solid black;
+    border-width: thin;
+    cursor: pointer;
+}
+
+#divide {
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    row-gap: 0px;
+    cursor: pointer;
+}
+
+#subtract {
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    row-gap: 0px;
+    border: solid black;
+    border-width: thin;
+    cursor: pointer;
+}
+
+#multiply {
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: solid black;
+    border-width: thin;
+    cursor: pointer;
+}
+
+#equals {
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: solid black;
+    border-width: thin;
+    cursor: pointer;
+}
+
+
+#zero {
+    right: 0px;
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: solid black;
+    border-width: thin;
+    cursor: pointer;
+}
+
+#one {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+#two {
+    right: 0px;
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+#three {
+    right: 0px;
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+#four {
+    right: 0px;
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+#five {
+    right: 0px;
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+#six {
+    right: 0px;
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+body {
+    background-color: #333;
+}
