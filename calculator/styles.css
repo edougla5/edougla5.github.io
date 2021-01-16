@@ -107,9 +107,18 @@
 }
 
 #one {
-    height: 30px;
-    width: 30px;
+    right: 0px;
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: solid black;
+    border-width: thin;
     cursor: pointer;
+    /* height: 30px;
+    width: 30px;
+    cursor: pointer; */
 }
 
 #two {
@@ -156,7 +165,30 @@
     width: 50px;
     background-color: white;
 }
-
+#seven {
+    right: 0px;
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+#eight {
+    right: 0px;
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+#nine {
+    right: 0px;
+    text-align: center;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
 body {
     background-color: #333;
 }
