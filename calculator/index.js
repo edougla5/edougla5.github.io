@@ -46,7 +46,3 @@ function myFunc(num) {
         multiply=false
     }
 }
-
-function equals() {
-    
-}
