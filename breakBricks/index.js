@@ -1,6 +1,8 @@
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 let rectColor = 'rgb(0,300,100)'
+ctx.canvas.width = window.innerWidth
+ctx.canvas.height = window.innerHeight
 
 let a = canvas.width-200
 let b = canvas.height-100
@@ -15,7 +17,7 @@ let ballRad = 10
 let gBricks = []
 
 for(let w=0;w<10;w++) {
-    gBricks[w] = [true,true,true,true,true,true,true,true,true]
+    gBricks[w] = [true,true,true,true]
 }
 
 document.body.style.backgroundColor = 'black'
@@ -63,9 +65,9 @@ function draw() {
     f += leftRight
     d += upDown
     
-    if (f >= a && f < a+x && d+ballRad >= b) {
+    if (f>a && f< a+x && d+ballRad > b) {
         upDown *= -1
-    } else if (f+ballRad == canvas.width) {
+    } else if (f+ballRad > canvas.width) {
         leftRight *= -1
     } else if (f-ballRad == 0) {
         leftRight *= -1
@@ -103,8 +105,8 @@ function touching(e) {
     canMove = true
 }
 function moving(f) {
-    if (canMove && f.x) {
-        a = f.clientX - x / 2
+    if (canMove) {
+        a = f.touches[0].clientX - x / 2
     }
 }
 function notTouching(e) {
