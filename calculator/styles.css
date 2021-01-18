@@ -128,6 +128,7 @@
     height: 50px;
     width: 50px;
     background-color: white;
+    cursor: pointer;
 }
 
 #three {
@@ -137,6 +138,7 @@
     height: 50px;
     width: 50px;
     background-color: white;
+    cursor: pointer;
 }
 
 #four {
@@ -146,6 +148,7 @@
     height: 50px;
     width: 50px;
     background-color: white;
+    cursor: pointer;
 }
 
 #five {
@@ -155,6 +158,7 @@
     height: 50px;
     width: 50px;
     background-color: white;
+    cursor: pointer;
 }
 
 #six {
@@ -164,6 +168,7 @@
     height: 50px;
     width: 50px;
     background-color: white;
+    cursor: pointer;
 }
 #seven {
     right: 0px;
@@ -172,6 +177,7 @@
     height: 50px;
     width: 50px;
     background-color: white;
+    cursor: pointer;
 }
 #eight {
     right: 0px;
@@ -180,6 +186,7 @@
     height: 50px;
     width: 50px;
     background-color: white;
+    cursor: pointer;
 }
 #nine {
     right: 0px;
@@ -188,6 +195,7 @@
     height: 50px;
     width: 50px;
     background-color: white;
+    cursor: pointer;
 }
 body {
     background-color: #333;

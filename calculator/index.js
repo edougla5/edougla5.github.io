@@ -29,7 +29,7 @@ function operator(value) {
     }
 }
 
-// let newNum = parseInt(document.getElementById('innerText').innerHTML)
+    let newNum
 
 function myFunc(num) {
     if(plus) {
@@ -44,8 +44,9 @@ function myFunc(num) {
     } else if(multiply) {
         numTot*= num
         multiply=false
-    } else {
-        numTot=num
-        screen.innerHTML = num
     }
+}
+
+function equals() {
+    
 }
