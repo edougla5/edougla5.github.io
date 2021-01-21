@@ -73,6 +73,15 @@ function draw() {
         leftRight *= -1
     } else if (d-ballRad == 0) {
         upDown *= -1
+    } else if (d>canvas.height) {
+        alert('game over')
+        x = 100
+        y = 10
+        f = 300
+        d = 300
+        for(let w=0;w<10;w++) {
+            gBricks[w] = [true,true,true,true]
+        }
     }
 
 } setInterval(draw, 10)
