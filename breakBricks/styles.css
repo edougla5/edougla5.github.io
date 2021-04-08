@@ -1,0 +1,6 @@
+#gameOver {
+    display: none;
+    top: 10px;
+    position: absolute;
+    color: white;
+}

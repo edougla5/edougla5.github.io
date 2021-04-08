@@ -3,7 +3,8 @@ const ctx = canvas.getContext('2d')
 let rectColor = 'rgb(0,300,100)'
 ctx.canvas.width = window.innerWidth
 ctx.canvas.height = window.innerHeight
-
+let died = document.getElementById('gameOver')
+let dead = false
 let a = canvas.width-200
 let b = canvas.height-100
 let x = 100
@@ -22,7 +23,7 @@ for(let w=0;w<10;w++) {
 
 document.body.style.backgroundColor = 'black'
 
-function draw() {
+    let myFunc = setInterval(function() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     ctx.beginPath()
     ctx.rect(a, b, x, y)
@@ -40,7 +41,6 @@ function draw() {
     let h = 50
     let color = 100
 
-    //comment more
     for (let i=0;i<5;i++) {
         for(let q=0;q<9;q++) {
             if(gBricks[i][q]) {
@@ -74,17 +74,19 @@ function draw() {
     } else if (d-ballRad == 0) {
         upDown *= -1
     } else if (d>canvas.height) {
-        alert('game over')
+        died.style.display = 'block'
         x = 100
         y = 10
         f = 300
         d = 300
+        clearInterval(myFunc)
+        dead = true
         for(let w=0;w<10;w++) {
             gBricks[w] = [true,true,true,true]
         }
     }
 
-} setInterval(draw, 10)
+},10)
 
 let dragEnd
 let dragStart
@@ -112,6 +114,10 @@ function up(e) {
 
 function touching(e) {
     canMove = true
+    if(dead = true) {
+        myFunc()
+        dead = false
+    }
 }
 function moving(f) {
     if (canMove) {
