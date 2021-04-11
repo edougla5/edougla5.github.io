@@ -2,5 +2,31 @@
     display: none;
     top: 10px;
     position: absolute;
-    color: white;
+    color: red;
+    left: 45%;
+    top: 45%;
+    justify-content: center;
+    animation: fade-in 10s linear;
+}
+
+#continue {
+    display: none;
+    position: absolute;
+    top: 55%;
+    left: 49%;
+    animation: delay 10s linear;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+@keyframes text-zoom {
+    0% { font-size: 5em; }
+    25% { font-size: 6em; }
+    50% { font-size: 7em; }
+    75% { font-size: 8em; }
+    100% { font-size: 8em; }
 }

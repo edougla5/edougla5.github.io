@@ -4,6 +4,7 @@ let rectColor = 'rgb(0,300,100)'
 ctx.canvas.width = window.innerWidth
 ctx.canvas.height = window.innerHeight
 let died = document.getElementById('gameOver')
+let myButton = document.getElementById('continue')
 let dead = false
 let a = canvas.width-200
 let b = canvas.height-100
@@ -14,15 +15,20 @@ let d = 300
 let upDown = 2
 let leftRight = 2
 let ballRad = 10
+let numBricks = 5
 
 let gBricks = []
 
 for(let w=0;w<10;w++) {
-    gBricks[w] = [true,true,true,true]
+    gBricks[w] = [true,true,true,true,true,true,true,true]
 }
 
-document.body.style.backgroundColor = 'black'
+document.body.style.backgroundColor = 'white'
 
+if (canvas.width < 1200) {
+    numBricks = 8
+}
+function game() {
     let myFunc = setInterval(function() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     ctx.beginPath()
@@ -41,8 +47,9 @@ document.body.style.backgroundColor = 'black'
     let h = 50
     let color = 100
 
-    for (let i=0;i<5;i++) {
-        for(let q=0;q<9;q++) {
+
+    for (let i=0;i<6;i++) {
+        for(let q=0;q<numBricks;q++) {
             if(gBricks[i][q]) {
                 ctx.beginPath()
                 ctx.rect(g, h, 60, 10)
@@ -75,19 +82,21 @@ document.body.style.backgroundColor = 'black'
         upDown *= -1
     } else if (d>canvas.height) {
         died.style.display = 'block'
+        myButton.style.display = 'block'
         x = 100
         y = 10
         f = 300
         d = 300
         clearInterval(myFunc)
-        dead = true
         for(let w=0;w<10;w++) {
-            gBricks[w] = [true,true,true,true]
+            gBricks[w] = [true,true,true,true,true,true,true,true]
         }
     }
 
 },10)
+}
 
+game()
 let dragEnd
 let dragStart
 let canMove = false
@@ -103,27 +112,27 @@ canvas.addEventListener('touchend', notTouching)
 function down(e) {
     canMove = true
 }
+
 function move(f) {
     if (canMove && f.x) {
         a = f.offsetX - x / 2
     }
 }
+
 function up(e) {
     canMove = false
 }
 
 function touching(e) {
     canMove = true
-    if(dead = true) {
-        myFunc()
-        dead = false
-    }
 }
+
 function moving(f) {
     if (canMove) {
         a = f.touches[0].clientX - x / 2
     }
 }
+
 function notTouching(e) {
     canMove = false
 }
