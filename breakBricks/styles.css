@@ -1,3 +1,9 @@
+#canvas {
+    display: block;
+    margin: 0 auto;
+    border: solid white;
+}
+
 #gameOver {
     display: none;
     top: 10px;
@@ -15,6 +21,7 @@
     top: 55%;
     left: 49%;
     animation: delay 10s linear;
+    cursor: pointer;
 }
 
 @keyframes fade-in {
@@ -29,4 +36,18 @@
     50% { font-size: 7em; }
     75% { font-size: 8em; }
     100% { font-size: 8em; }
+}
+
+#scoreTitle {
+    color: white;
+    position: absolute;
+    top:-10px;
+    left: 110px;
+}
+
+#score {
+    color: white;
+    top: -9px;
+    position: absolute;
+    left: 175px;
 }
