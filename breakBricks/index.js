@@ -1,10 +1,11 @@
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 let rectColor = 'rgb(0,300,100)'
-ctx.canvas.width = window.innerWidth
-ctx.canvas.height = window.innerHeight
+ctx.canvas.width = window.innerWidth-30
+ctx.canvas.height = window.innerHeight-25
 let died = document.getElementById('gameOver')
 let myButton = document.getElementById('continue')
+let myScore = document.getElementById('score')
 let dead = false
 let a = canvas.width-200
 let b = canvas.height-100
@@ -16,6 +17,10 @@ let upDown = 2
 let leftRight = 2
 let ballRad = 10
 let numBricks = 5
+let realScore = 0
+
+console.log(window.innerHeight)
+console.log(window.innerWidth)
 
 let gBricks = []
 
@@ -23,13 +28,16 @@ for(let w=0;w<10;w++) {
     gBricks[w] = [true,true,true,true,true,true,true,true]
 }
 
-document.body.style.backgroundColor = 'white'
+document.body.style.backgroundColor = 'black'
 
-if (canvas.width < 1200) {
+if (canvas.width > 700) {
     numBricks = 8
 }
 function game() {
+    myScore.innerHTML = '0'
     let myFunc = setInterval(function() {
+    died.style.display = 'none'
+    myButton.style.display = 'none'
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     ctx.beginPath()
     ctx.rect(a, b, x, y)
@@ -60,6 +68,8 @@ function game() {
             if (d-ballRad<=h+10 && d+ballRad>=h && f>=g && f<=g+60 && gBricks[i][q]) {
                 gBricks[i][q] = false
                 upDown *= -1
+                realScore++
+                myScore.innerHTML = realScore
             }
             
             g+=80
