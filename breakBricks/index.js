@@ -19,9 +19,6 @@ let ballRad = 10
 let numBricks = 5
 let realScore = 0
 
-console.log(window.innerHeight)
-console.log(window.innerWidth)
-
 let gBricks = []
 
 for(let w=0;w<10;w++) {
@@ -30,9 +27,8 @@ for(let w=0;w<10;w++) {
 
 document.body.style.backgroundColor = 'black'
 
-if (canvas.width > 700) {
-    numBricks = 8
-}
+numBricks = Math.floor(canvas.width/100) + 1
+
 function game() {
     myScore.innerHTML = '0'
     let myFunc = setInterval(function() {
@@ -51,10 +47,9 @@ function game() {
     ctx.fill()
     ctx.closePath()
 
-    let g = 40
+    let g = 50
     let h = 50
     let color = 100
-
 
     for (let i=0;i<6;i++) {
         for(let q=0;q<numBricks;q++) {
@@ -71,11 +66,10 @@ function game() {
                 realScore++
                 myScore.innerHTML = realScore
             }
-            
             g+=80
         }
         h+=40
-        g=40
+        g=50
         color +=50
     }
     
@@ -101,12 +95,14 @@ function game() {
         for(let w=0;w<10;w++) {
             gBricks[w] = [true,true,true,true,true,true,true,true]
         }
+        realScore = 0
     }
 
 },10)
 }
 
 game()
+
 let dragEnd
 let dragStart
 let canMove = false
